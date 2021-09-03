@@ -52,7 +52,7 @@ async def play(_, message: Message):
 
     except Exception as e:
         lel.edit(
-            ""❌ Şarkı bulunamadı. \n \n Başka bir şarkı deneyin veya doğru şekilde heceleyin ."
+            ""❌ Şarkı bulunamadı. \n \n Başka bir şarkı deneyin veya dogru şekilde heceleyin ."
         )
         print(str(e))
         return
@@ -87,7 +87,7 @@ async def play(_, message: Message):
     elif url:
         file_path = await converter.convert(youtube.download(url))
     else:
-        return await lel.edit_text("❗ You did not give me anything to play!")
+        return await lel.edit_text("❗ Bana oynayabileceğim bir ses vermedin!")
 
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
@@ -101,7 +101,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo=thumb_name,
         reply_markup=keyboard,
-        caption="▶️ **Playing** here the song requested by {} via YouTube Music".format(
+        caption="▶️ **Oynatılıyor** tarafından istenilen şarkı {} Hatıralara music aracılığıyla".format(
         message.from_user.mention()
         ),
     )
