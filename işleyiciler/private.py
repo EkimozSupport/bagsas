@@ -9,27 +9,27 @@ from helpers.filters import other_filters2
 async def start(_, message: Message):
     await message.reply_sticker("CAACAgQAAx0CTv65QgABBfJlYF6VCrGMm6OJ23AxHmD6qUSWESsAAhoQAAKm8XEeD5nrjz5IJFYeBA")
     await message.reply_text(
-        f"""**Hey, I'm **{bn}** 🎵
+        f"""**Merhaba **{bn}** 🎵
 
-I can play music in your group's voice call. Developed by [ZauTe Km](https://t.me/ZauTeKm).
+Ben Gruplarınızda Ban yetkisiz olarak müzik dinlemeniz için . [SAHİP](https://t.me/MangoSahip) Tarafından geliştirildim.
 
-Add me to your group and play music freely!**
+Beraber güzel hatıralar biriktirelim beni grubunuza alın!**
         """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🛠 Helpful Command 🛠", url="https://telegra.ph/VC-Music-Player-Bot-Helpful-Commands-04-17")
+                        "🛠 Komutlar 🛠", url="https://t.me/kizilsancakbilgi")
                   ],[
                     InlineKeyboardButton(
-                        "💬 Group", url="https://t.me/ZauTeSupport"
+                        "💬 Ücretli bot kanal", url="https://t.me/ucretlibotlar"
                     ),
                     InlineKeyboardButton(
-                        "🔊 Channel", url="https://t.me/TGBotSzK"
+                        "🔊 BİLGİ", url="https://t.me/Kizilsancakbilgi"
                     )
                 ],[ 
                     InlineKeyboardButton(
-                        "➕ Add To Your Group ➕", url="https://t.me/zK_GvCBot?startgroup=true"
+                        "➕ Add To Your Group ➕", url="https://t.me/HatiralaraMusicBot?startgroup=true"
                     )]
             ]
         ),
@@ -43,7 +43,7 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🔊 Channel", url="https://t.me/ZauTeKm")
+                        "🔊 Channel", url="https://t.me/Kizilsancakbilgi")
                 ]
             ]
         )
