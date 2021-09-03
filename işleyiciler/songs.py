@@ -47,15 +47,15 @@ async def a(client, message: Message):
             open(thumb_name, 'wb').write(thumb.content)
 
         except Exception as e:
-            m.edit(f"**{Bn} :-** 😕 Found nothing. Try changing the spelling a little.\n\n{e}")
+            m.edit(f"**{Bn} :-** 😕 Hiç bir hatıra bulamadım. Doğru hatırayı aramayı deneyin.\n\n{e}")
             return
     except Exception as e:
         m.edit(
-           f"**{Bn} :-** 😕 Found Nothing. Sorry.\n\nTry another keywork or maybe spell it properly."
+           f"**{Bn} :-** 😕 Hatıra bulunmadı. Üzgünüm.\n\nDogru Hatırayı Aradığınızdan emin olun hatıralar önemlidir."
         )
         print(str(e))
         return
-    await m.edit(f"**{Bn} :-** 📥 Downloading...\n**Query :-** {query}")
+    await m.edit(f"**{Bn} :-** 📥 indiriliyor...\n**Query :-** {query}")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
