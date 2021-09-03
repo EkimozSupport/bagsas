@@ -22,7 +22,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 @errors
 async def play(_, message: Message):
 
-    lel = await message.reply("🔎 **Finding** the song...")
+    lel = await message.reply("🔎 **Aranıyor** şarkı...")
     sender_id = message.from_user.id
     user_id = message.from_user.id
     sender_name = message.from_user.first_name
@@ -33,7 +33,7 @@ async def play(_, message: Message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    await lel.edit("🎵 **Processing** Sounds...")
+    await lel.edit("🎵 **İşleniyor** Sesler...")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -52,7 +52,7 @@ async def play(_, message: Message):
 
     except Exception as e:
         lel.edit(
-            "❌ Song not found.\n\nTry another song or maybe spell it properly."
+            ""❌ Şarkı bulunamadı. \n \n Başka bir şarkı deneyin veya doğru şekilde heceleyin ."
         )
         print(str(e))
         return
