@@ -11,14 +11,14 @@ from config import BOT_NAME as Bn
 from helpers.filters import command, other_filters
 from helpers.decorators import errors
 
-@Client.on_message(command("song") & other_filters)
+@Client.on_message(command("ara") & other_filters)
 @errors
 async def a(client, message: Message):
     query = ''
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = await message.reply(f"**{Bn} :-** 🔍 Searching for {query}")
+    m = await message.reply(f"**{Bn} :-** 🔍 Sarkı aranıyor  {query}")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
