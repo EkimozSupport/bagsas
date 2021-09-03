@@ -24,7 +24,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"**{bn} :-** 😕 Video {DURATION_LIMIT} minute(s) aren't allowed!\n🤐 The provided video is {audio.duration / 60} minute(s)"
+                f"**{bn} :-** 😕 Dosya belirtilen {DURATION_LIMIT} zamandan(s) Uzun!\n🤐 ve oynatmıyorum {audio.duration / 60} minute(s)"
             )
 
         file_name = get_file_name(audio)
